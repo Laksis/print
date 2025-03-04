@@ -1,0 +1,163 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Sidebar Navigation */
+.sidenav {
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    padding-top: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidenav h2 {
+    color: #007bff;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    width: 90%;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.dropdown-btn {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: left;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.dropdown-btn:hover {
+    background: #0056b3;
+    transform: scale(1.03);
+}
+
+.dropdown-content {
+    display: none;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1000;
+}
+
+/* Search Input */
+.dropdown-content input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    outline: none;
+    background: #f1f1f1;
+    color: #333;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Dropdown List */
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.dropdown-content ul li {
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.dropdown-content ul li:hover {
+    background: #e3e3e3;
+}
+
+/* Upload Section */
+.upload-section {
+    width: 90%;
+    text-align: center;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    display: none;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.upload-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+/* File Upload Button */
+.file-upload-label {
+    display: block;
+    background: #28a745;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px auto;
+    width: 80%;
+}
+
+.file-upload-label:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+#imageUpload {
+    display: none;
+}
+
+/* Canvas Styling */
+.canvas-container {
+    margin-left: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: calc(100% - 320px);
+}
+
+canvas {
+    max-width: 80%;
+    max-height: 80%;
+    border: 1px solid #007bff;
+    border-radius: 0px;
+}
+

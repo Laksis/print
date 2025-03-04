@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product & Model Selection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidenav">
+        <h2>CREATE PDF PRINT FILE</h2>
+
+        <!-- Product Dropdown -->
+        <div class="dropdown">
+            <button class="dropdown-btn" id="productButton" onclick="toggleDropdown('productDropdown')">Select Product ▼</button>
+            <div class="dropdown-content" id="productDropdown">
+                <input type="text" id="productSearch" onkeyup="filterOptions('productSearch', 'productList')" placeholder="Search Product">
+                <ul id="productList">
+                    <li onclick="selectProduct('Soft Case')">Soft Case</li>
+                    <li onclick="selectProduct('Soft Case MagSafe')">Soft Case MagSafe</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Model Dropdown (Hidden Until Product is Selected) -->
+        <div class="dropdown" id="modelDropdownContainer" style="display: none;">
+            <button class="dropdown-btn" id="modelButton" onclick="toggleDropdown('modelDropdown')">Select Model ▼</button>
+            <div class="dropdown-content" id="modelDropdown">
+                <input type="text" id="modelSearch" onkeyup="filterOptions('modelSearch', 'modelList')" placeholder="Search Model">
+                <ul id="modelList"></ul> <!-- Modeļi tiks pievienoti dinamiskā veidā -->
+            </div>
+        </div>
+
+        <!-- File Upload Section (Hidden Until Model is Selected) -->
+        <div class="upload-section" id="uploadSection" style="display: none;">
+            <h3>Upload Image</h3>
+            <label for="imageUpload" class="file-upload-label">Choose an Image</label>
+            <input type="file" id="imageUpload" accept="image/png, image/jpeg">
+            <div id="previewContainer">
+                <img id="imagePreview" src="" alt="Preview" style="display: none;">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Canvas to Display Uploaded Image and mask -->
+    <div class="canvas-container">
+        <canvas id="imageCanvas"></canvas>
+    </div>
+
+    <!-- SVG Display Section -->
+    <div id="svgContainer"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
